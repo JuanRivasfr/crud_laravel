@@ -39,13 +39,16 @@
 
         /* Estilo para los campos de texto y correo */
         input[type="text"],
-        input[type="email"] {
+        input[type="email"],
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px; /* Espacio debajo de cada campo */
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box; /* Importante para que el padding no cambie el ancho total */
+            background-color: #fff; /* Igual que los inputs */
+            font-size: 14px;
         }
 
         /* Estilo para las etiquetas (labels) */
@@ -124,6 +127,14 @@
         
         <label for="correo">Correo:</label>
         <input type="email" id="correo" name="correo" placeholder="Correo" required>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="">Seleccione...</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+        </select>
+
 
         <div class="button-container">
             <a href="{{ route('usuarios.index') }}" class="form-button back-button">Atrás</a>
